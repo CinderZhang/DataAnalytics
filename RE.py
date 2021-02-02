@@ -60,25 +60,21 @@ data
 
 # %%
 data = '''
-Xi Li
+
 Associate Professor - WCOB
 479-575-7094
 xili@uark.edu
 
-Kuan Liu
-Kuan Liu
 Assistant Professor - WCOB
 479-575-4505
 kuanliu@uark.edu
 
-Pu Liu
-Pu Liu
+Professor
 Department Chair
 479-575-6095
 pliu@uark.edu
 
-Andrew Lynch
-Andrew Lynch
+
 Assistant Professor - WCOB
 479-575-4505
 al045@uark.edu'''
@@ -99,17 +95,19 @@ import re
 
 
 # %%
-re.findall(r'\w+@\w+\.edu', data)
+emails=re.findall(r'\w+@\w+\.edu', data)
 
 # %% [markdown]
 # Or we might want to find the phone numbers:
 
 # %%
-re.findall(r'\d{3}\-\d{3}\-\d{4}', data)
+phones=re.findall(r'\d{3}\-\d{3}\-\d{4}', data)
 
 
 # %%
-re.findall(r'[\d\-]{12}', data)
+phones2 = re.findall(r'[\d\-]{12}', data)
+
+ap=re.findall(r"[^\r\n]*?Assistant[^.]*[\b\r\n]+",data)  
 
 # %% [markdown]
 # ## Meta characters
@@ -228,11 +226,11 @@ print(re.findall(r'\b\w+\b', s))
 # 
 # For example, the `.` has a special meaning, so if we want to find a period in text, we use `\.`.
 
-# %%
+# %% greedy by default
 re.search(r'\w+\.', s)
 
 
-# %%
+# %% add ? to make it lazy,i.e. capture as little as possible
 re.findall(r'\w+[\.\?]', s)
 
 
@@ -241,7 +239,7 @@ print(data)
 
 
 # %%
-re.findall(r'(.+)\n(.*Professor)', data)
+prof=re.findall(r'(.+)\n(.*Professor)', data)
 
 # %% [markdown]
 # The other meta characters are:
@@ -264,7 +262,7 @@ we had everything before us, we had nothing before us...'''
 
 
 # %%
-re.findall(r'it was the (.+? of .+?\b)', totc, re.IGNORECASE)
+itwas=re.findall(r'it was the (.+? of .+?\b)', totc, re.IGNORECASE)
 
 # %% [markdown]
 # <img src="http://clipart-library.com/images/pT5rBGGac.gif" alt="Question" style="width: 50px; float: left; margin-right: 20px;"/>
@@ -278,6 +276,14 @@ re.findall(r'it was the (.+ of .+)', totc, re.IGNORECASE)
 
 # %%
 re.findall(r'it was the (.+? of .+?)', totc, re.IGNORECASE)
+
+# %% Sentence with certain words [coronavirus|liquidity] i.e. coronavirus or liquidity
+statement='''However, a shift occurred early in 2020, as the coronavirus spread across the globe.As equity and credit markets entered free-fall in March, a flight to quality ensued. The Fed, as well as other global central banks and governments, enacted historic monetary and fiscal assistance 
+and quantitative easing programs. These efforts helped to provide liquidity within credit markets and ease investor anxiety brought on by widespread lockdowns and their dampening effects on economic activity. 
+As part of these measures, the Fed cut the target overnight lending rate to near zero. This led to falling interest rates across much of the Treasury curve, boosting returns for Treasuries. 
+In addition, the Fed purchase of corporate credit worked to support risk asset prices. Generally, investment-grade corporate debt outperformed like-duration Treasuries over the period. 
+High-yield debt lagged the broader market, due in part to the high concentration of energy issuers within the universe. Energy companies lagged the broader market for much of the year.'''
+kw=re.findall("[^.]* [coronavirus|liquidity] [^.]*\.",statement)
 
 # %% [markdown]
 # ### Accessing groups
