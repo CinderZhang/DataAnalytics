@@ -283,6 +283,8 @@ and quantitative easing programs. These efforts helped to provide liquidity with
 As part of these measures, the Fed cut the target overnight lending rate to near zero. This led to falling interest rates across much of the Treasury curve, boosting returns for Treasuries. 
 In addition, the Fed purchase of corporate credit worked to support risk asset prices. Generally, investment-grade corporate debt outperformed like-duration Treasuries over the period. 
 High-yield debt lagged the broader market, due in part to the high concentration of energy issuers within the universe. Energy companies lagged the broader market for much of the year.'''
+
+
 kw=re.findall("[^.]* [coronavirus|liquidity] [^.]*\.",statement)
 
 # %% [markdown]
