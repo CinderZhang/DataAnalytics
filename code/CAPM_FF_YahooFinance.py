@@ -115,5 +115,9 @@ df_stk['Returns'].hist(bins=20)
 
 # %%
 df_regOutput = assetPriceReg(df_stk)
+xlsfile=fullDir+stkName+'_CAPM_FF.xlsx'
+print(xlsfile)
 
+# %% output model
+df_regOutput.to_excel(xlsfile)
 
