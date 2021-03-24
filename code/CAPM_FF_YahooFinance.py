@@ -80,7 +80,9 @@ if sys.platform == 'linux':
     inputDir = '/datasets/stocks/' 
 elif sys.platform == 'win32':
     inputDir = '\\datasets\stocks\\' 
-
+else :
+    inputDir = '/datasets/stocks/'
+    
 fullDir = home+inputDir
 print(fullDir)
 
