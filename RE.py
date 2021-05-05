@@ -25,7 +25,7 @@ lines = '''<P style="TEXT-ALIGN: left"><FONT size=2 face=Arial>The energy sector
     <P style="TEXT-ALIGN: left"><FONT size=2 face=Arial>Elsewhere in the portfolio, shares of </FONT><B><FONT size=2 face=Arial>Tyson Foods </FONT></B><FONT size=2 face=Arial>declined early in the period due to input cost inflation and broader market uncertainty stemming from the coronavirus pandemic, which hampered exports to China and shifted demand to residential use from food services. Industry-wide price-fixing allegations also pressured shares of chicken companies during the period. We are optimistic that improving chicken fundamentals will drive the stock higher over the near term. Shares of </FONT><B><FONT size=2 face=Arial>Boeing </FONT></B><FONT size=2 face=Arial>suffered amid delays in the 737 MAX recertification process and pressure on air travel from coronavirus fears. While we continue to find Boeing shares attractive, we are cognizant of the uncertain near-term recovery path of global air travel post-pandemic and, therefore, largely kept our position flat in the name throughout the year.</FONT></P>
     <P style="TEXT-ALIGN: left"><FONT size=2 face=Arial>Some of the portfolio&#8217;s largest absolute contributors came from the information technology sector. Shares of </FONT><B><FONT size=2 face=Arial>Qualcomm </FONT></B><FONT size=2 face=Arial>rebounded from the first-quarter sell-off, rising considerably for the one-year period due to the company&#8217;s strong position in 5G cellular technology. During the period, the company was able to resolve all its remaining licensing disputes, thereby stabilizing that business and leaving investors to focus on its earnings growth runway as 5G devices proliferate. Shares of </FONT><B><FONT size=2 face=Arial>Microsoft </FONT></B><FONT size=2 face=Arial>rose as the company reported robust growth within its Intelligent Cloud segment. Investors appeared to prioritize Microsoft&#8217;s solid fundamentals, defensible business model, and attractive growth potential. We trimmed both positions throughout the year on strength.</FONT></P>
 '''
-keyword = "optimistic"
+keyword = "optimistic|energy"
 
  
 
@@ -40,11 +40,11 @@ sentences = re.split('(\<P|\<P\>)', lines)
 # print(sentences_terminated)
 
  
-
+str=""
 for line in sentences:
-    if keyword in line:
+    if re.search(keyword,line):
         print(line)
-        str=line
+        str=str+line
 # You can remove all the html marks as you wish from the str variable;
 
 
@@ -174,12 +174,12 @@ s = "Here is a string of text. It's not that interesting, is it?"
 
 
 # %%
-re.search(r'[a-z]', s)
+findit = re.search(r'[a-z]', s)
 
 
 # %%
 # Include both lower and uppercase letters
-re.search(r'[A-z]', s)
+findit=re.search(r'[A-z]', s)
 
 
 # %%
