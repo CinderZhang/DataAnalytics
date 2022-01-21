@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: 'AvenirNextPForBBG';
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+    
+    src: url('https://assets.bwbx.io/s3/fontservice/fonts/AvenirNextPForBBG-Regular-eb3bb1b816.woff2') format('woff2'),
+         url('https://assets.bwbx.io/s3/fontservice/fonts/AvenirNextPForBBG-Regular-093448f517.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'AvenirNextPForBBG';
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+    
+    src: url('https://assets.bwbx.io/s3/fontservice/fonts/AvenirNextPForBBG-Medium-27084a7c0e.woff2') format('woff2'),
+         url('https://assets.bwbx.io/s3/fontservice/fonts/AvenirNextPForBBG-Medium-f6fb481dd6.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'AvenirNextPForBBG';
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+    
+    src: url('https://assets.bwbx.io/s3/fontservice/fonts/AvenirNextPForBBG-Demi-b9b4abf0ea.woff2') format('woff2'),
+         url('https://assets.bwbx.io/s3/fontservice/fonts/AvenirNextPForBBG-Demi-7459932d1d.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'AvenirNextPForBBG';
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+    
+    src: url('https://assets.bwbx.io/s3/fontservice/fonts/AvenirNextPForBBG-Bold-384c1e7c36.woff2') format('woff2'),
+         url('https://assets.bwbx.io/s3/fontservice/fonts/AvenirNextPForBBG-Bold-614f607955.woff') format('woff');
+}
