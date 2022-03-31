@@ -9,10 +9,10 @@ import pandas as pd
 from sec_api import ExtractorApi
 # %% Very important: Register and get an api key!!!
 
-extractorApi = ExtractorApi("9032aee8eeafb3f9369234d703e8cce5df9af61778a29e1cd48491faf660249c")
+extractorApi = ExtractorApi("Your Key")
 
 # %% define the list of the filings
-url = "C:\\Users\\xz035\\OneDrive - University of Arkansas\\Teaching\\University of Arkansas\\Financial Data Analytics I\\Spring2022\\TSLA_10K_url.xlsx"
+url = "Your_Path\\TSLA_10K_url.xlsx"
 print(url)
 
 # %% read the list into a pandas dataframe
