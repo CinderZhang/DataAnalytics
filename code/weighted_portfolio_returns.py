@@ -64,8 +64,9 @@ retp[['Portfolio']].plot(figsize=(10, 6))
 # %% portfolio returns statistics
 retp.describe()
 retp.describe()
-print("Long-Short Annualized Return\n",retp.mean() * 252)
-print("Long-Short Annualized Volatility\n",retp.std() * np.sqrt(252))
+print("Annualized Return\n",retp.mean() * 252)
+print("Annualized Volatility\n",retp.std() * np.sqrt(252))
+
 # %% Calculate the long-short portfolio returns
 wght = [1, -1]
 retls=rets[symbols]
