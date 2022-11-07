@@ -22,5 +22,7 @@ https://www.packtpub.com/product/mastering-pandas-for-finance/9781783985104
 Bloomberg:
 
 Fixed Income
-https://library.bu.edu/c.php?g=543024&p=3800689
-https://www.bloomberg.com/professional/product/fixed-income-trading/
+
+    https://library.bu.edu/c.php?g=543024&p=3800689
+
+    https://www.bloomberg.com/professional/product/fixed-income-trading/
