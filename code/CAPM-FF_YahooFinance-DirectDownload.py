@@ -1,23 +1,28 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+VS code or Spyder Editor
 
 CAPM/FF factor models script file.
 """
 
    
 # To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown]'
-# %%
+# Notebook only: To add a new markdown cell , type '# %% [markdown]'
+# %% import packages
 import pandas as pd
 import numpy as np 
+
+# Find and read package documentation.
+import pandas_datareader as pdr
 import pandas_datareader.data as web 
+# Use the package download multiple datasets. 
+
 import statsmodels.formula.api as sm # module for stats models
 from statsmodels.iolib.summary2 import summary_col # module for presenting stats models outputs nicely
 from pathlib import Path
 import sys
 import os
-import pandas_datareader as pdr
+
 import datetime as dt
 
 # %%
@@ -29,7 +34,7 @@ def price2ret(prices,retType='simple'):
     return ret
 
 
-# %%
+# %% Define Functions
 def assetPriceReg(df_stk):
     import pandas_datareader.data as web  # module for reading datasets directly from the web
     
@@ -76,10 +81,12 @@ def assetPriceReg(df_stk):
     return results_df
 
 
-# %%
+# %% Main code body start here
+
 
 df_stk = web.DataReader('AAPL', 'yahoo', start='2019-09-10', end='2019-10-09')
 
+# %% for local datasets
 # home = str(Path.home())
 # print(home)
 
@@ -107,27 +114,29 @@ df_stk = web.DataReader('AAPL', 'yahoo', start='2019-09-10', end='2019-10-09')
 df_stk.head()
 
 
-# %%
+# %% visualize the data--'Volume' variable
 df_stk.drop(['Volume'],axis=1,inplace=True)
 df_stk.plot()
 
 
-# %%
+# %% Call the function(s), clean, inspect the data
 df_stk['Returns'] = price2ret(df_stk[['Adj Close']])
 df_stk = df_stk.dropna()
 df_stk.head()
 
 
-# %%
+# %% visulize the data -- 'Return' variable
 df_stk['Returns'].plot()
 
 
-# %%
+# %% histogram
 df_stk['Returns'].hist(bins=20)
 
 
-# %%
+# %% Run asset pricing model(s) by calling the function
 df_regOutput = assetPriceReg(df_stk)
+
+# %% save the result
 # xlsfile=fullDir+stkName+'_CAPM_FF.xlsx'
 # print(xlsfile)
 
