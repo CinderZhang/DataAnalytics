@@ -10,15 +10,28 @@ db = wrds.Connection(wrds_username='joe')
 db.create_pgpass_file()
 
 # %% read stock price and return data, AAPL's permno is 14593
-# %%
-apple = db.raw_sql("""select permno, date, prc, ret, shrout 
+
+apple_stk = db.raw_sql("""select *
                         from crsp.msf 
                         where permno = 14593
                         and date>='01/01/2019'""", 
-                     date_cols=['date'])# %% read financial data
+                     date_cols=['date'])
+
+
+
 # %% read financial data
-params = {"tickers": ("AAPL")}
-financial_data = db.raw_sql(
-    "SELECT tic, datadate, gvkey, cusip FROM comp.funda WHERE tic IN %(tickers)s",
-    params=params,
-)
+apple_fin = db.raw_sql("""select *
+                        from comp.funda
+                        where tic = 'AAPL'
+                        """, 
+                     date_cols=['datedate'])
+
+
+# params = {"tickers": ("AAPL")}
+
+# financial_data = db.raw_sql(
+#     "SELECT tic, datadate, gvkey, cusip,at FROM comp.funda WHERE tic IN %(tickers)s",
+#     params=params,
+# )
+
+# %%
