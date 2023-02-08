@@ -4,13 +4,15 @@ documents: readings and updated tech papers
 
 Main Data Source and documentation
 ...The list is incomplete, develop your research ability by trying, ask data provider or host support, web search, ChatGPT etc.
-...CRSP on WRDS
-......Link: https://wrds-www.wharton.upenn.edu/pages/get-data/center-research-security-prices-crsp/
+...WRDS
+......CRSP Link: https://wrds-www.wharton.upenn.edu/pages/get-data/center-research-security-prices-crsp/
 .........Supporting documents, such as data Manuals are on the right side of the page.
 .........As of Feb. 8th, 2023, the stock return data link:
 ............https://wrds-www.wharton.upenn.edu/pages/get-data/center-research-security-prices-crsp/annual-update/stock-version-2/
 ......WRDS support: 
 .........https://wrds-support.wharton.upenn.edu/hc/en-us/requests/new?ticket_form_id=360001322651
+......Jupyter Notebook for Python on WRDS:
+.........https://wrds-jupyter.wharton.upenn.edu/hub/login?next=%2Fhub%2F
 ......Knowing issues:
 .........Cannot logon with Python code.
 ............Respond from WRDS: Thank you for contacting WRDS Support.
