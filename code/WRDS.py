@@ -19,11 +19,7 @@ apple_stk_monthly = db.raw_sql("""select *
                         and date>='01/01/2019'""", 
                      date_cols=['date'])
 
-apple_stk_daily = db.raw_sql("""select *
-                        from crsp.dsf 
-                        where permno = 14593
-                        and date>='01/01/2019'""", 
-                     date_cols=['date'])
+
 
 # %% read financial data
 apple_fin = db.raw_sql("""select *
@@ -41,11 +37,26 @@ apple_fin = db.raw_sql("""select *
 # )
 
 # %% Fama French 5 factors
-ff_daily = db.raw_sql("""select *
-                        from ff.	fivefactors_daily 
+ff_monthly = db.raw_sql("""select *
+                        from ff.	fivefactors_monthly 
                         where date>='01/01/2019'""", 
                      date_cols=['date'])
+                     
+
+# %% lagged return
+apple_stk_monthly['return'] = apple_stk_monthly['ret'].shift(1)
+
+# %% lagged Fama French 5 factors
+ff_monthly['lagged_mktrf'] = ff_monthly['mktrf'].shift(1)
+ff_monthly['lagged_smb'] = ff_monthly['smb'].shift(1)
+ff_monthly['lagged_hml'] = ff_monthly['hml'].shift(1)
+ff_monthly['lagged_rmw'] = ff_monthly['rmw'].shift(1)
+ff_monthly['lagged_cma'] = ff_monthly['cma'].shift(1)
+
+
 # %% merge data ff_daily and apple_stk_daily
-apple_stk_ff_daily = pd.merge(apple_stk_daily, ff_daily, on='date', how='left')
+apple_stk_ff_monthly = pd.merge(apple_stk_monthly, ff_monthly, on='date', how='left')
+
+
 
 # %%
