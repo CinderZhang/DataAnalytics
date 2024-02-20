@@ -2,69 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 1: Introduction to Python and Setting Up the Environment</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 5: Lasso and Ridge Regression in Finance</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
 <body>
-    <!-- Add the Back to Home button at the bottom as well -->
-    <div class="back-to-home">
-        <a href="index.html">← Back to Home</a>
-    </div>
-    <div class="container">
-        <h2>Week 5: Regression Models</h2>
+  <div class="back-to-home">
+    <a href="index.html">← Back to Home</a>
+  </div>
+  
+  <div class="container">
+    <h2>Week 6: Lasso and Ridge Regression for Financial Analysis</h2>
 
-        <h3>Learning Objectives:</h3>
-        <ul>
-            <li>Understand the fundimentals of regression.</li>
-            <li>Regression in traditional statistical models.</li>
-            <li>Regression in Machine Learning models--the logic and the math.</li>
-            <li>Regression Applications in Finance.</li>
-        </ul>
+    <h3>Learning Objectives:</h3>
+    <ul>
+      <li>Understand overfitting and the need for regularization in finance.</li>
+      <li>Grasp the fundamentals of Lasso (L1) and Ridge (L2) regularization. </li>
+      <li>Implement Lasso and Ridge regression in Python for financial datasets.</li>
+      <li>Optimize regularization parameters using cross-validation.</li>
+      <li>Interpret feature importances from Lasso regression.</li>
+    </ul>
 
-        <h3>Materials:</h3>
+    <h3>Materials:</h3>
+    <h4>Understanding Regularization</h4>
+    <ul>
+      <li>Lasso and Ridge: [https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/](https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/)</li>
+      <li>Overfitting in Finance: (Add a resource tailored to financial overfitting) </li>
+    </ul>
 
-        <h4>1. Regression in traditional statistical models</h4>
-        <ul>
-               <li><a href="https://en.wikipedia.org/wiki/Ordinary_least_squares" target="_blank">Introduction to OLS</a></li>
-               <li><a href="https://www.kaggle.com/code/sudhirnl7/linear-regression-tutorial" target="_blank">OLS with Python</a> </li>
+    <h4>Tools and Data Sources</h4>
+    <ul>
+      <li>Python and Scikit-learn:
+          <ul>
+              <li>Lasso: [https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html)</li>
+              <li>Ridge: [https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)</li>
+          </ul>     
+      </li>
+      <li>Paid Service (Most university may have it): WRDS for Stock Data (Include WRDS tutorials/guides)</li>
+      <li>Paid Service: Glassnode for Crypto Data (Include Glassnode tutorials/guides)</li>
+    </ul>
 
-        </ul>
-        <a href="https://www.python.org/about/" target="_blank">Read more about Python</a>
+    <h3>Applications and Exercises:</h3>
+    <ol>
+      <li> **Stock Price Prediction:** Predict stock prices using WRDS data and investigate the impact of regularization. Come out with your own factors. </li>
+    </ol>
 
-        <h4>2. Machine Learning Regression</h4>
-        <ul>
-            <li> <a href="https://www.geeksforgeeks.org/ml-linear-regression/" target="_blank">Introduction to ML Linear Regression</a></li>
+    <h3>Beyond the Basics:</h3>
+    <p>Lasso and Ridge are powerful foundations. Explore more advanced techniques:</p>
+    <ul>
+      <li>Non-linear models (Decision Trees, Random Forests, Neural Networks)</li>
+      <li>Financial Feature Engineering</li>
+      <li>Time Series Considerations (ARIMA, GARCH) </li>
+    </ul>
 
-        </ul>
-        <a href="https://docs.anaconda.com/anaconda/install/" target="_blank">Anaconda Installation Guide</a><br>
-        <a href="https://code.visualstudio.com/download" target="_blank">VS Code Installation Guide</a>
+  </div>
 
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="week5.html">← Previous Week</a>
+    |
+    <a href="week7.html">Next Week →</a>
+  </div>
 
-        <h3>Application and Exercises:</h3>
-        <ol>
-            <li>Fama-French Models: Research the model specifications, data source, and implementate the model</li>
-            <li>Real Estate Market and Demographic/Economic Factors: Research the possible model specifications, data source, and implementate the model</li>
-            <li>Your own applications.</li>
+  <div class="back-to-home">
+    <a href="index.html">← Back to Home</a>
+  </div>
 
-        </ol>
-
-    </div>
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="week4.html">← Previous Week</a>
-        |
-        <a href="week6.html">Next Week →</a>
-    </div>
-
-        <!-- Add the Back to Home button at the bottom as well -->
-        <div class="back-to-home">
-            <a href="index.html">← Back to Home</a>
-        </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
