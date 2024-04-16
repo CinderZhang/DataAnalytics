@@ -96,4 +96,6 @@ def lstm_stock_prediction(stock_symbol, start_date, end_date):
     plt.show()
 
 #%% Example usage with WMT stock from Jan 1, 2019 to Dec 31, 2019
-lstm_stock_prediction('WMT', '2023-08-01', '2024-03-31')
+lstm_stock_prediction('NVDA', '2020-08-01', '2024-03-31')
+
+# %%
