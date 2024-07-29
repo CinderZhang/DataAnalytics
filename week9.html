@@ -10,49 +10,57 @@
 </head>
 
 <body>
-    <!-- Add the Back to Home button at the bottom as well -->
-    <div class="back-to-home">
-        <a href="index.html">← Back to Home</a>
-    </div>
-    <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Data Analytics I</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
         <h2>Week 9: Unsupervised Learning: Clustering</h2>
 
         <h3>Materials:</h3>
         <ul>
             <li><a href="https://www.geeksforgeeks.org/ml-types-learning-part-2/" target="_blank">Unsupervised Learning</a></li>
-            <li>Applications: Identify Anomalies (for fraud detection, risk management,security, default, financial crime etc),Clustering asset allocation, Diversification on Funds, Investment Signal Identification.</li>
+            <li>Applications: Identify Anomalies (for fraud detection, risk management, security, default, financial crime etc.), Clustering asset allocation, Diversification on Funds, Investment Signal Identification.</li>
             <li><a href="https://www.geeksforgeeks.org/clustering-in-machine-learning/" target="_blank">Clustering</a></li>
-            <li><a href="https://www.geeksforgeeks.org/k-means-clustering-introduction/" target="_blank">Clustering Example-K means clustering</a></li>
-            <li><a href="https://www.linkedin.com/posts/andrew-ang-a9a65a89_a-sharper-lens-factors-and-sectors-blackrock-activity-7086676036762902528-wjiV/" target="_blank">Potential Application-Identify market segments:AMZN and TSLA are not tech but consumer discretionary sector stocks </a></li>
+            <li><a href="https://www.geeksforgeeks.org/k-means-clustering-introduction/" target="_blank">Clustering Example - K-means clustering</a></li>
+            <li><a href="https://www.linkedin.com/posts/andrew-ang-a9a65a89_a-sharper-lens-factors-and-sectors-blackrock-activity-7086676036762902528-wjiV/" target="_blank">Potential Application - Identify market segments: AMZN and TSLA are not tech but consumer discretionary sector stocks</a></li>
         </ul>
-
-        
-
 
         <h3>Application and Exercises:</h3>
         <ol>
             <li>Clustering S&P 500 companies</li>
-            <li>Optional: Clusting Anomalies</li>
+            <li>Optional: Clustering Anomalies</li>
             <li>Difference between Classification and Clustering</li>
             <li>Conduct Clustering analysis.</li>
-            <li><a href="https://deepnote.com/@kokinoda/Data-Clustering-for-SandP500-Stock-Data-d71580fd-42ec-4c95-aae5-3ba4ddbb4ff1" target="_blank">Code Sample 1-S&P 500</a></li>
-            <li><a href="https://medium.com/@facujallia/stock-classification-using-k-means-clustering-8441f75363de" target="_blank">Code Sample 2-K-means</a></li>
-            <li><a href="https://www.kaggle.com/code/demirkaya/clustering-companies-based-on-stock-price-movement/notebook" target="_blank">Code Sample 3-Company Clustering. 
-                This code is in R. It's a great skill to have to translate between Python and R (or any other language). Have ChatGPT help you with this.</a></li>
-        
+            <li><a href="https://deepnote.com/@kokinoda/Data-Clustering-for-SandP500-Stock-Data-d71580fd-42ec-4c95-aae5-3ba4ddbb4ff1" target="_blank">Code Sample 1 - S&P 500</a></li>
+            <li><a href="https://medium.com/@facujallia/stock-classification-using-k-means-clustering-8441f75363de" target="_blank">Code Sample 2 - K-means</a></li>
+            <li><a href="https://www.kaggle.com/code/demirkaya/clustering-companies-based-on-stock-price-movement/notebook" target="_blank">Code Sample 3 - Company Clustering. This code is in R. It's a great skill to have to translate between Python and R (or any other language). Have ChatGPT help you with this.</a></li>
         </ol>
 
-    </div>
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="week8.html">← Previous Week</a>
-        |
-        <a href="week10.html">Next Week →</a>
-    </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="week8.html">← Previous Week</a>
+            |
+            <a href="week10.html">Next Week →</a>
+        </div>
 
-        <!-- Add the Back to Home button at the bottom as well -->
         <div class="back-to-home">
             <a href="index.html">← Back to Home</a>
         </div>
+    </main>
+
+    <footer class="container text-center">
+        <p>&copy; 2024 Cinder Zhang. All rights reserved. Contact us at <a href="mailto:xzhang@walton.uark.edu">xzhang at walton uark</a></p>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
