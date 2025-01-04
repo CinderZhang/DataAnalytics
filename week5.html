@@ -25,39 +25,128 @@
   
     <div style="height: 80px;"></div>
 
- <main class="container">
+    <main class="container">
         <h2>Week 5: Regression Models</h2>
 
         <h3>Learning Objectives:</h3>
         <ul>
-            <li>Understand the fundamentals of regression.</li>
-            <li>Regression in traditional statistical models.</li>
-            <li>Regression in Machine Learning models.</li>
-            <li>Regression Applications in Finance.</li>
+            <li>Understand the fundamentals of regression</li>
+            <li>Regression in traditional statistical models</li>
+            <li>Regression in Machine Learning models</li>
+            <li>Regression Applications in Finance</li>
         </ul>
 
-        <h3>Materials:</h3>
+        <section>
+            <h3>Core Resources:</h3>
+            <h4>1. Traditional Statistical Models</h4>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Ordinary_least_squares" target="_blank">Introduction to OLS</a></li>
+                <li><a href="https://www.kaggle.com/code/sudhirnl7/linear-regression-tutorial" target="_blank">OLS with Python</a></li>
+                <li><a href="https://www.python.org/about/" target="_blank">Python Documentation</a></li>
+            </ul>
 
-        <h4>1. Regression in traditional statistical models</h4>
-        <ul>
-            <li><a href="https://en.wikipedia.org/wiki/Ordinary_least_squares" target="_blank">Introduction to OLS</a></li>
-            <li><a href="https://www.kaggle.com/code/sudhirnl7/linear-regression-tutorial" target="_blank">OLS with Python</a></li>
-        </ul>
-        <a href="https://www.python.org/about/" target="_blank">Read more about Python</a>
+            <h4>2. Machine Learning Regression</h4>
+            <ul>
+                <li><a href="https://www.geeksforgeeks.org/ml-linear-regression/" target="_blank">Introduction to ML Linear Regression</a></li>
+                <li><a href="https://www.geeksforgeeks.org/gradient-descent-in-linear-regression/" target="_blank">Gradient Descent</a></li>
+            </ul>
 
-        <h4>2. Machine Learning Regression</h4>
-        <ul>
-            <li><a href="https://www.geeksforgeeks.org/ml-linear-regression/" target="_blank">Introduction to ML Linear Regression</a></li>
-            <li><a href="https://www.geeksforgeeks.org/gradient-descent-in-linear-regression/" target="_blank">Gradient Descent</a></li>
-        </ul>
+            <h4>3. Financial Applications</h4>
+            <ul>
+                <li><b>Fama-French Models:</b>
+                    <ul>
+                        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/0304405X93900235">Common Risk Factors in Stock Returns (1993)</a></li>
+                        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304405X14002323">A Five-Factor Asset Pricing Model (2015)</a></li>
+                    </ul>
+                </li>
+                <li><b>Implementation Resources:</b>
+                    <ul>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/pages/support/research-wrds/macros/wrds-macro-ff-factors/">WRDS Fama-French Factors Documentation</a></li>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/pages/support/applications/risk-factors-and-industry-benchmarks/fama-french-factors/">WRDS Factor Construction Guide</a></li>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/pages/wrds-research/applications/python-replications/fama-french-factors-python-ciz-format/">WRDS Python Factor Construction</a></li>
+                    </ul>
+                </li>
+                <li><b>Data Sources:</b>
+                    <ul>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/">WRDS Database</a></li>
+                        <li><a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">Kenneth French Data Library</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-        <h3>Application and Exercises:</h3>
-        <ol>
-            <li>Fama-French Models: Research the model specifications, data source, and implement the model</li>
-            <li>Real Estate Market and Demographic/Economic Factors: Research the possible model specifications, data source, and implement the model</li>
-            <li>Your own applications.</li>
-            <li>Review linear regression, OLS, and gradient descent with ChatGPT.</li>
-        </ol>
+        <section>
+            <h2>Weekly Assignment</h2>
+            <div class="alert alert-info">
+                <strong>Due:</strong> End of Week 5
+            </div>
+
+            <h3>Tasks:</h3>
+            <ol>
+                <li>Data Collection
+                    <ul>
+                        <li>Download Fama-French factors from Kenneth French's website</li>
+                        <li>Gather stock return data for analysis</li>
+                        <li>Prepare risk-free rate data</li>
+                    </ul>
+                </li>
+                <li>Factor Construction
+                    <ul>
+                        <li>Replicate the Fama-French factor construction following the WRDS Python implementation guide</li>
+                        <li>Compare your constructed factors with the official Fama-French factors</li>
+                        <li>Document any discrepancies and potential causes</li>
+                    </ul>
+                </li>
+                <li>Model Implementation
+                    <ul>
+                        <li>Code the three-factor model regression</li>
+                        <li>Extend to five-factor model</li>
+                        <li>Calculate factor loadings</li>
+                    </ul>
+                </li>
+                <li>Analysis
+                    <ul>
+                        <li>Compare model performances</li>
+                        <li>Analyze factor contributions</li>
+                        <li>Create summary visualizations</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="alert alert-warning">
+                <strong>Submit:</strong> Code containing:
+                <ul>
+                    <li>Factor construction code and validation</li>
+                    <li>Model implementation and analysis</li>
+                    <li>Comparison with official Fama-French factors</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Resources and Implementation Guides:</h3>
+            <ul>
+                <li><b>Official Documentation:</b>
+                    <ul>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/pages/support/research-wrds/macros/wrds-macro-ff-factors/">WRDS Fama-French Factors Documentation</a></li>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/pages/support/applications/risk-factors-and-industry-benchmarks/fama-french-factors/">WRDS Factor Construction Guide</a></li>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/pages/wrds-research/applications/python-replications/fama-french-factors-python-ciz-format/">WRDS Python Factor Construction</a></li>
+                    </ul>
+                </li>
+                <li><b>Data Sources:</b>
+                    <ul>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/">WRDS Database Access</a></li>
+                        <li><a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">Kenneth French Data Library</a></li>
+                    </ul>
+                </li>
+                <li><b>Additional Reading:</b>
+                    <ul>
+                        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/0304405X93900235">Fama & French (1993) - Common Risk Factors in Stock Returns</a></li>
+                        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304405X14002323">Fama & French (2015) - A Five-Factor Asset Pricing Model</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
         <div style="text-align: center; margin-top: 20px;">
             <a href="week4.html">← Previous Week</a>
@@ -71,7 +160,7 @@
     </main>
 
     <footer class="container text-center">
-        <p>&copy; 2024 Cinder Zhang. All rights reserved. Contact us at <a href="mailto:xzhang@walton.uark.edu">xzhang at walton uark</a></p>
+        <p>&copy; 2025 Cinder Zhang. All rights reserved. Contact us at <a href="mailto:xzhang@walton.uark.edu">xzhang at walton uark</a></p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -25,45 +25,204 @@
         </div>
     </nav>
     <div style="height: 80px;"></div>
- <main class="container">
-        <h1>Week 1: Introduction and Setup</h1>
+    <main class="container">
+        <h1>Week 1: Technical Implementation and Setup</h1>
 
         <section>
             <h2>Topics Covered:</h2>
             <ul>
                 <li>Introduction to Financial Machine Learning</li>
-                <li>Impact of Generative AI in Finance</li>
                 <li>Python Environment Setup</li>
-                <li>Data Retrieval from WRDS, Bloomberg, etc.</li>
-                <li>Visualization of Financial Data</li>
+                <li>Data Retrieval from WRDS, Yahoo Finance, FRED, etc.</li>
+                <li>Basic Visualization of Financial Data</li>
             </ul>
         </section>
 
         <section>
             <h2>Key Resources and Links:</h2>
             <ul>
-                <li>Introduction to Financial Machine Learning - <a href="https://www.labelvisor.com/introduction-to-ai-in-finance/">Article Link</a>, <a href="https://github.com/AI4Finance-Foundation">GitHub Link</a></li>
-                <li>Impact of Generative AI in Finance - <a href="https://www.bcg.com/publications/2023/generative-ai-in-finance-and-accounting">BCG Generative AI in Finance</a>, <a href="https://github.com/gschubert/website/blob/gh-pages/gpt_sep5.pdf">UCLA Research</a> and <a href="https://www.dropbox.com/scl/fi/o9uz9q0iqlqnwr5cmw2it/Eisfeldt_AFA_AI_panel.pdf?rlkey=fhrx1dny3d8kioq634pel6m6l&dl=0">Slides</a></li>
-                <li>Python Basics - <a href="https://www.python.org/about/gettingstarted/">Beginner's Guide to Python</a></li>
-                <li>Data Retrieval from WRDS, Fed, etc. - <a href="https://wrds-www.wharton.upenn.edu/pages/wrds-research/applications/python-replications/">WRDS</a></li>
-                <li>Visualization of Financial Data - <a href="https://www.mlq.ai/python-for-finance-data-visualization/">Python for Finance: Data Visualization</a></li>
+                <li>Introduction to Financial Machine Learning:
+                    <ul>
+                        <li><a href="#">Python for Finance (2025 Edition)</a></li>
+                        <li><a href="https://github.com/AI4Finance-Foundation">Financial AI Foundation</a></li>
+                        <li>Note: If links are broken, use Perplexity.ai to search for "Introduction to Financial Machine Learning Python 2025"</li>
+                    </ul>
+                </li>
+                <li>Development Environment:
+                    <ul>
+                        <li><a href="https://www.python.org/">Python Download</a></li>
+                        <li><a href="https://code.visualstudio.com/">VS Code Download</a></li>
+                        <li>Search "Python development environment setup 2025" on Perplexity.ai for latest best practices</li>
+                    </ul>
+                </li>
+                <li>Data Sources:
+                    <ul>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/">WRDS Platform</a></li>
+                        <li><a href="https://finance.yahoo.com/">Yahoo Finance</a></li>
+                        <li><a href="https://fred.stlouisfed.org/">FRED Economic Data</a></li>
+                        <li><a href="https://www.sec.gov/edgar">SEC EDGAR</a></li>
+                        <li>Search "financial data APIs 2025" for alternative sources</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2>Sample Code and Tutorial Repositories:</h2>
+            <h2>Setup Instructions:</h2>
             <ul>
-                <li>Python Programming for Finance - <a href="https://github.com/yhilpisch/py4fi">Python for Finance: Mastering Data-Driven Finance (GitHub Repo)</a></li>
+                <li>Python Environment Setup:
+                    <ul>
+                        <li>Install Python directly from <a href="https://www.python.org/">python.org</a></li>
+                        <li>Install VS Code and Python extension</li>
+                        <li>Learn to use requirements.txt for package management</li>
+                        <li>Key packages: pandas, numpy, matplotlib, yfinance, requests, pandas_datareader</li>
+                    </ul>
+                </li>
+                <li>Data Management Setup:
+                    <ul>
+                        <li>Create organized directory structure for data storage</li>
+                        <li>Set up both local and cloud storage (OneDrive/GitHub)</li>
+                        <li>Implement version control for your code and data</li>
+                        <li>Create backup procedures for critical data</li>
+                    </ul>
+                </li>
+                <li>Data Source Access:
+                    <ul>
+                        <li>Configure WRDS access credentials</li>
+                        <li>Set up yfinance for market data</li>
+                        <li>Configure FRED API access</li>
+                        <li>Create data download scripts with proper error handling</li>
+                        <li>Implement data validation checks</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2>Exercises for Students:</h2>
+            <h2>Data Management Best Practices:</h2>
             <ul>
-                <li>Python: Install Python and VS Code, and explore Copilot with VS Code.</li>
-                <li>Python Environment: <a href="https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/">Virtual Environment</a></li>
-                <li>Data Retrieval Exercise: Retrieve stock price data using WRDS or Bloomberg and perform basic data inspection.</li>
-                <li>Visualization Exercise: Create a time-series plot of stock prices using packages in Python.</li>
+                <li>Directory Structure:
+                    <pre>
+project/
+├── data/
+│   ├── raw/         # Original, immutable data
+│   │   ├── market/  # Market data (WRDS, Yahoo)
+│   │   ├── macro/   # Economic data (FRED)
+│   │   └── sec/     # SEC filings
+│   ├── processed/   # Cleaned, transformed data
+│   └── backup/      # Regular backups
+├── code/
+│   ├── download/    # Data retrieval scripts
+│   └── analysis/    # Analysis scripts
+└── results/         # Output and visualizations</pre>
+                </li>
+                <li>Data Handling Guidelines:
+                    <ul>
+                        <li>Always keep original data files unchanged</li>
+                        <li>Document data sources and download dates</li>
+                        <li>Implement automated backup procedures</li>
+                        <li>Use consistent file naming conventions</li>
+                        <li>Include data source metadata in downloads</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Weekly Assignment</h2>
+            <div class="alert alert-info">
+                <strong>Due:</strong> End of Week 1
+            </div>
+
+            <h3>Tasks:</h3>
+            <ol>
+                <li>Environment Setup
+                    <ul>
+                        <li>Install Python 3.10 or later</li>
+                        <li>Set up VS Code with Python extension</li>
+                        <li>Configure Git integration</li>
+                    </ul>
+                </li>
+                <li>Package Setup
+                    <ul>
+                        <li>Install required packages</li>
+                        <li>Test all imports</li>
+                        <li>Document any installation issues</li>
+                    </ul>
+                </li>
+                <li>Project Structure
+                    <ul>
+                        <li>Create course project directory</li>
+                        <li>Initialize Git repository</li>
+                        <li>Create weekly subdirectories</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="alert alert-warning">
+                <strong>Submit:</strong> Screenshots showing successful setup and test script outputs
+            </div>
+        </section>
+
+        <section>
+            <h2>Week 1 Exercise:</h2>
+            <p>Complete these essential setup tasks:</p>
+            <ul>
+                <li>Environment Setup:
+                    <ul>
+                        <li>Install Python and VS Code</li>
+                        <li>Create and test virtual environment</li>
+                        <li>Install required packages via pip</li>
+                    </ul>
+                </li>
+                <li>Data Management:
+                    <ul>
+                        <li>Set up project directory structure</li>
+                        <li>Create data backup procedures</li>
+                        <li>Write data download scripts for:
+                            <ul>
+                                <li>Stock data from Yahoo Finance</li>
+                                <li>Economic indicators from FRED</li>
+                                <li>Company data from WRDS</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Basic Analysis:
+                    <ul>
+                        <li>Download S&P 500 constituent data</li>
+                        <li>Create backup copy</li>
+                        <li>Generate simple price plots</li>
+                        <li>Document your process</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Common Setup Issues and Solutions:</h2>
+            <ul>
+                <li>Python Installation:
+                    <ul>
+                        <li>Use Python 3.11+ for best compatibility</li>
+                        <li>Add Python to system PATH</li>
+                        <li>Test installation: python --version</li>
+                    </ul>
+                </li>
+                <li>Package Management:
+                    <ul>
+                        <li>Create requirements.txt file</li>
+                        <li>Use pip install -r requirements.txt</li>
+                        <li>Document package versions</li>
+                    </ul>
+                </li>
+                <li>Data Access:
+                    <ul>
+                        <li>Test connections before bulk downloads</li>
+                        <li>Implement timeout and retry logic</li>
+                        <li>Verify data integrity after download</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
@@ -75,7 +234,7 @@
     </main>
 
     <footer class="container text-center">
-        <p>&copy; 2024 Cinder Zhang. All rights reserved. Contact us at <a href="mailto:xzhang@walton.uark.edu">xzhang at walton uark</a></p>
+        <p>&copy; 2025 Cinder Zhang. All rights reserved. Contact us at <a href="mailto:xzhang@walton.uark.edu">xzhang at walton uark</a></p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

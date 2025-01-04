@@ -24,66 +24,256 @@
             </ul>
         </div>
     </nav>
-    <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Data Analytics I - Week 1</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/favicon.ico">
-</head>
-
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Data Analytics I</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    
     <div style="height: 80px;"></div>
 
-
-
-
- <main class="container">
+    <main class="container">
         <h1>Week 3: Advanced Data Handling</h1>
 
         <section>
             <h2>Topics Covered:</h2>
             <ul>
-                <li>Advanced Numpy Techniques</li>
-                <li>Pandas for Financial Data Analysis</li>
-                <li>Matrix Operations in Python</li>
+                <li>Advanced Pandas for Financial Data</li>
+                <li>AI-Enhanced Data Processing</li>
+                <li>SAS to Python Migration</li>
+                <li>Efficient Data Processing Techniques</li>
+                <li>Financial Time Series Operations</li>
+                <li>Data Quality and Validation</li>
             </ul>
         </section>
 
         <section>
-            <h2>Detailed Content and Resources:</h2>
+            <h2>Core Concepts and Implementation:</h2>
             <ul>
-                <li><b>Advanced Numpy Techniques</b>: Multi-dimensional arrays, efficient operations, and statistical analysis. Practical examples: <a href="https://www.w3schools.com/python/numpy/default.asp">Numpy Tutorial</a>. Interactive Notebook: <a href="https://github.com/yhilpisch/py4fi2nd/blob/master/code/ch04/04_numpy.ipynb">Numpy Techniques Notebook</a>.</li>
-                <li><b>Pandas for Financial Data Analysis</b>: DataFrame and Series objects, data importing/exporting, cleaning, and time-series data handling. Comprehensive guide: <a href="https://www.geeksforgeeks.org/pandas-tutorial/">Pandas Tutorial</a>. Interactive Notebook: <a href="https://github.com/yhilpisch/py4fi2nd/blob/master/code/ch05/05_pandas.ipynb">Pandas Techniques Notebook</a>.</li>
-                <li><b>Matrix Operations in Python</b>: Basics of matrix arithmetic, matrix transformations, and solving linear equations. Numpy for linear algebra: <a href="https://numpy.org/doc/stable/reference/routines.linalg.html">Linear Algebra in Numpy</a>. Additional Matrix Operations: <a href="https://www.geeksforgeeks.org/numpy-linear-algebra/">More Examples</a>.</li>
+                <li><b>AI-Powered Pandas Tools</b>
+                    <ul>
+                        <li>pandasai: AI-powered data analysis</li>
+                        <li>pandas-ai: Natural language queries for DataFrames</li>
+                        <li>dataprep: Automated data preparation</li>
+                        <li>autoviz: Automated visualization generation</li>
+                    </ul>
+                </li>
+                <li><b>SAS to Python Migration</b>
+                    <ul>
+                        <li>Reading SAS (.sas7bdat) files with pandas</li>
+                        <li>SAS to Python syntax conversion</li>
+                        <li>WRDS data handling best practices</li>
+                        <li>Performance optimization for large SAS datasets</li>
+                    </ul>
+                </li>
+                <li><b>Advanced Pandas Operations</b>
+                    <ul>
+                        <li>MultiIndex and hierarchical indexing</li>
+                        <li>Advanced groupby operations</li>
+                        <li>Rolling and expanding windows</li>
+                        <li>Efficient memory usage with categorical data</li>
+                    </ul>
+                </li>
+                <li><b>Financial Data Processing</b>
+                    <ul>
+                        <li>Handling missing data in financial time series</li>
+                        <li>Adjusting for corporate actions</li>
+                        <li>Working with different time zones</li>
+                        <li>Managing point-in-time data</li>
+                    </ul>
+                </li>
+                <li><b>Performance Optimization</b>
+                    <ul>
+                        <li>Vectorized operations</li>
+                        <li>Efficient data types</li>
+                        <li>Chunked data processing</li>
+                        <li>Using pandas.eval() for large datasets</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2>Exercises for Students:</h2>
+            <h2>AI-Enhanced Data Analysis Setup:</h2>
             <ul>
-                <li>Continue to Review the concepts with ChatGPT: Bayes' Theorem; and Random Walk.</li>
-                <li><b>Solving a Linear Equation System with Numpy</b>: Use Numpy to solve a set of linear equations.</li>
-                <li><b>Calculate CAPM Beta with Pandas and Numpy</b>: Utilize Pandas to process financial data and Numpy to compute the CAPM Beta of stocks.</li>
+                <li><b>LLM Options</b>
+                    <ul>
+                        <li>Ollama (Free, provided on department GPU server)</li>
+                        <li>OpenAI API (Student purchase required, ~$5-20/month)</li>
+                        <li>Anthropic API (Student purchase required, pricing varies)</li>
+                    </ul>
+                </li>
+                <li><b>AI-Powered Tools</b>
+                    <ul>
+                        <li>pandasai: Supports multiple LLM backends</li>
+                        <li>pandas-ai: Natural language DataFrame operations</li>
+                        <li>dataprep & autoviz: Automated analysis tools</li>
+                    </ul>
+                </li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Getting Started:</h2>
+            <ol>
+                <li><b>Ollama Setup</b>
+                    <ul>
+                        <li>Access provided on department GPU server</li>
+                        <li>See <a href="https://ollama.ai/library">Ollama Model Library</a> for available models and usage</li>
+                        <li>Follow the <a href="https://github.com/ollama/ollama">official documentation</a> for model commands</li>
+                    </ul>
+                </li>
+                <li><b>Optional Commercial APIs</b>
+                    <pre><code># If you choose to purchase API access:
+# 1. Create accounts at openai.com or anthropic.com
+# 2. Purchase credits (student discounts may be available)
+# 3. Create a .env file (never commit this!)
+OPENAI_API_KEY=your_purchased_key
+ANTHROPIC_API_KEY=your_purchased_key</code></pre>
+                </li>
+                <li><b>Install Required Packages</b>
+                    <pre><code>pip install python-dotenv pandasai pandas-ai dataprep autoviz</code></pre>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Using AI Tools:</h2>
+            <div class="alert alert-warning">
+                <strong>Important Note:</strong> The code examples below are for demonstration purposes only. They illustrate the general approach but are not production-ready. You will need to:
+                <ul>
+                    <li>Debug and adapt the code to your specific use case</li>
+                    <li>Handle errors and edge cases</li>
+                    <li>Test with your actual data structure</li>
+                    <li>Refer to the latest documentation as APIs may change</li>
+                </ul>
+            </div>
+            <pre><code># Example code - requires debugging and adaptation
+# Using Ollama (Available to all students)
+from pandasai import SmartDataframe
+from pandasai.llm import Ollama
+
+llm_local = Ollama(model="llama2")  # See Ollama docs for available models
+df_local = SmartDataframe(your_dataframe, config={'llm': llm_local})  # Replace your_dataframe
+result_local = df_local.chat('Generate summary statistics')
+
+# If you've purchased API access:
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+# OpenAI example (if purchased)
+from pandasai.llm import OpenAI
+llm = OpenAI(api_token=os.getenv('OPENAI_API_KEY'))
+df = SmartDataframe(your_dataframe, config={'llm': llm})  # Replace your_dataframe</code></pre>
+            <p class="text-muted">Note: These examples assume certain package versions and configurations. Always check the current documentation and be prepared to debug integration issues.</p>
+        </section>
+
+        <section>
+            <h2>Model Comparison:</h2>
+            <ul>
+                <li><b>Ollama (Provided)</b>
+                    <ul>
+                        <li>Free access via department GPU server</li>
+                        <li>Good for initial development and testing</li>
+                        <li>Suitable for most course assignments</li>
+                        <li>No usage limits or costs</li>
+                    </ul>
+                </li>
+                <li><b>Commercial APIs (Optional)</b>
+                    <ul>
+                        <li>Higher accuracy but requires payment</li>
+                        <li>OpenAI: Strong general performance (~$5-20/month)</li>
+                        <li>Anthropic: Detailed analysis (pricing varies)</li>
+                        <li>Consider for advanced projects or research</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Weekly Assignment</h2>
+            <div class="alert alert-info">
+                <strong>Due:</strong> End of Week 3
+            </div>
+
+            <h3>Tasks:</h3>
+            <ol>
+                <li>Data Analysis Setup
+                    <ul>
+                        <li>Install pandas-ai and related packages</li>
+                        <li>Configure Ollama access</li>
+                        <li>Test basic functionality</li>
+                    </ul>
+                </li>
+                <li>Financial Data Analysis
+                    <ul>
+                        <li>Load and clean sample financial data</li>
+                        <li>Perform basic statistical analysis</li>
+                        <li>Create time series visualizations</li>
+                    </ul>
+                </li>
+                <li>AI-Enhanced Analysis
+                    <ul>
+                        <li>Use Ollama for data exploration</li>
+                        <li>Generate automated insights</li>
+                        <li>Compare with traditional analysis</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="alert alert-warning">
+                <strong>Submit:</strong> Jupyter notebook with analysis and comparison of traditional vs. AI-enhanced methods
+            </div>
+        </section>
+
+        <section>
+            <h2>Week 3 Projects:</h2>
+            <ol>
+                <li><b>Market Analysis (Using Ollama)</b>
+                    <ul>
+                        <li>Build data processing pipeline</li>
+                        <li>Implement natural language queries</li>
+                        <li>Generate automated reports</li>
+                        <li>Optional: Compare with commercial API results</li>
+                    </ul>
+                </li>
+                <li><b>Data Processing Pipeline</b>
+                    <ul>
+                        <li>Automate data cleaning with AI assistance</li>
+                        <li>Create interactive analysis system</li>
+                        <li>Implement quality checks</li>
+                        <li>Generate comprehensive reports</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Note: All course assignments can be completed using the provided Ollama setup-though not going to be perfect. Commercial APIs are optional but encourage exploration and at student's discretion.</p>
+        </section>
+
+        <section>
+            <h2>Best Practices:</h2>
+            <ul>
+                <li><b>Resource Management</b>
+                    <ul>
+                        <li>Check GPU server status before running jobs</li>
+                        <li>Use batch processing for large datasets</li>
+                        <li>Monitor GPU memory usage</li>
+                    </ul>
+                </li>
+                <li><b>If Using Commercial APIs</b>
+                    <ul>
+                        <li>Monitor usage costs carefully</li>
+                        <li>Use .env files for API keys</li>
+                        <li>Never commit API keys to version control</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Additional Resources:</h2>
+            <ul>
+                <li><a href="https://ollama.ai/library">Ollama Model Library</a></li>
+                <li><a href="https://github.com/pandas-ai/pandas-ai">PandasAI Documentation</a></li>
+                <li><a href="https://platform.openai.com/docs">OpenAI API Documentation</a></li>
+                <li><a href="https://docs.anthropic.com/claude/docs">Anthropic Claude Documentation</a></li>
+            </ul>
+            <p>Check the department's GPU server status page for Ollama availability and usage guidelines. For those interested in commercial APIs, compare pricing and features before purchasing.</p>
         </section>
 
         <div style="text-align: center; margin-top: 20px;">
@@ -98,7 +288,7 @@
     </main>
 
     <footer class="container text-center">
-        <p>&copy; 2024 Cinder Zhang. All rights reserved. Contact us at <a href="mailto:xzhang@walton.uark.edu">xzhang at walton uark</a></p>
+        <p>&copy; 2025 Cinder Zhang. All rights reserved. Contact us at <a href="mailto:xzhang@walton.uark.edu">xzhang at walton uark</a></p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

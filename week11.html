@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 11: Natural Language Processing</title>
+    <title>Week 11: Natural Language Processing in Finance</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
@@ -25,23 +25,71 @@
   
     <div style="height: 80px;"></div>
 
- <main class="container">
-        <h2>Week 11: Natural Language Processing</h2>
+    <main class="container">
+        <h1>Week 11: Natural Language Processing in Finance</h1>
 
-        <h3>Materials:</h3>
-        <ul>
-            <li><a href="https://github.com/CinderZhang/DataAnalytics/blob/main/Documents/Textual%20Analysis%20in%20Finance.pdf" target="_blank">Textual Analysis in Finance</a></li>
-            <li><a href="https://github.com/CinderZhang/DataAnalytics/blob/main/code/10-K/parsing10k-Mar2022.ipynb" target="_blank">Sample Code: Parsing SEC Filings, 10-K: Item 7</a></li>
-            <li><a href="https://github.com/CinderZhang/DataAnalytics/tree/main/code/10-K" target="_blank">Sample Codes: Download, process SEC Filings, 10-K</a></li>
-            <li><a href="https://github.com/CinderZhang/DataAnalytics/blob/main/code/Sentiment%20and%20Classification/Sentiment_Classification.py" target="_blank">Sample Code: Sentiment and Classification</a></li>
-        </ul>
+        <section>
+            <h2>Resources</h2>
+            <ul>
+                <li>Core Reading
+                    <ul>
+                        <li><a href="https://github.com/CinderZhang/DataAnalytics/blob/main/Documents/Textual%20Analysis%20in%20Finance.pdf" target="_blank">Textual Analysis in Finance</a></li>
+                    </ul>
+                </li>
+                <li>Implementation Examples
+                    <ul>
+                        <li><a href="https://github.com/CinderZhang/DataAnalytics/blob/main/code/10-K/parsing10k-Mar2022.ipynb" target="_blank">SEC Filings Analysis: 10-K Item 7</a></li>
+                        <li><a href="https://github.com/CinderZhang/DataAnalytics/tree/main/code/10-K" target="_blank">SEC Filings: Download and Process</a></li>
+                        <li><a href="https://github.com/CinderZhang/DataAnalytics/blob/main/code/Sentiment%20and%20Classification/Sentiment_Classification.py" target="_blank">Sentiment Analysis Implementation</a></li>
+                    </ul>
+                </li>
+                <li>Modern NLP Approaches
+                    <ul>
+                        <li><a href="https://platform.openai.com/docs/guides/text-analysis" target="_blank">OpenAI API for Text Analysis</a></li>
+                        <li><a href="https://huggingface.co/docs/transformers/tasks/sequence_classification" target="_blank">FinBERT and Financial NLP Models</a></li>
+                        <li>Example Code:
+                            <pre><code>
+import openai
+from transformers import pipeline
 
-        <h3>Application and Exercises:</h3>
-        <ol>
-            <li>Understand the Textual Data using SEC Edgar filings as a source/examples.</li>
-            <li>Process 10-K SEC Filings with loop and functions.</li>
-            <li>Perform Sentiment Analysis.</li>
-        </ol>
+# OpenAI approach
+def analyze_sentiment_openai(text):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "Analyze the sentiment of this financial text. Return POSITIVE, NEGATIVE, or NEUTRAL."},
+            {"role": "user", "content": text}
+        ]
+    )
+    return response.choices[0].message['content']
+
+# FinBERT approach
+sentiment_analyzer = pipeline("sentiment-analysis", 
+                            model="ProsusAI/finbert")
+
+def analyze_sentiment_finbert(text):
+    result = sentiment_analyzer(text)
+    return result[0]['label']
+
+# Example usage
+text = "Company X reported strong earnings growth and increased market share."
+print(analyze_sentiment_openai(text))    # Requires API key
+print(analyze_sentiment_finbert(text))   # Local model
+                            </code></pre>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assignment</h2>
+            <p>SEC Filings Analysis Project</p>
+            <ul>
+                <li>Process and analyze 10-K SEC filings</li>
+                <li>Compare traditional and LLM-based sentiment analysis</li>
+            </ul>
+        </section>
 
         <div style="text-align: center; margin-top: 20px;">
             <a href="week10.html">← Previous Week</a>

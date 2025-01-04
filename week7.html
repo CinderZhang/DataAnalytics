@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 7: Classification and Decision Tree</title>
+    <title>Week 7: Classification and Decision Trees in Finance</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
@@ -26,23 +26,146 @@
     <div style="height: 80px;"></div>
 
  <main class="container">
-        <h2>Week 7: Classification and Decision Tree</h2>
+        <h2>Week 7: Classification and Decision Trees in Finance</h2>
 
-        <h3>Materials:</h3>
-        <ul>
-            <li><a href="https://www.geeksforgeeks.org/getting-started-with-classification/" target="_blank">Introduction to Classification Models</a></li>
-            <li>Applications: Loan underwriting; Rating Down/up; Fraud detection; default prediction; Trading Signals; Customer Churn...</li>
-            <li><a href="https://www.kaggle.com/datasets/wordsforthewise/lending-club" target="_blank">Sample Datasets and Code Templates</a></li>
-            <li>Regression Applications in Finance.</li>
-        </ul>
+        <section>
+            <h3>Learning Objectives:</h3>
+            <ul>
+                <li>Master classification fundamentals in financial contexts</li>
+                <li>Understand decision tree algorithms and their applications</li>
+                <li>Learn model evaluation metrics for classification</li>
+                <li>Apply classification models to financial problems</li>
+                <li>Interpret and validate classification results</li>
+            </ul>
+        </section>
 
-        <h3>Application and Exercises:</h3>
-        <ol>
-            <li>Understand the sample dataset</li>
-            <li>Process the dataset</li>
-            <li>Build classification models on the dataset</li>
-            <li><a href="https://www.kaggle.com/code/faressayah/lending-club-loan-defaulters-prediction/notebook" target="_blank">Code Sample</a></li>
-        </ol>
+        <section>
+            <h3>Core Resources:</h3>
+            
+            <h4>1. Theoretical Foundations</h4>
+            <ul>
+                <li><a href="https://www.jstor.org/stable/2699986">Classification and Regression Trees - Breiman et al.</a></li>
+                <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0378426698001757">Credit Scoring Using Machine Learning - Hand & Henley</a></li>
+                <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0378426607003512">Bank Rating Prediction - Altman & Rijken</a></li>
+            </ul>
+
+            <h4>2. Technical Implementation</h4>
+            <ul>
+                <li><a href="https://scikit-learn.org/stable/modules/tree.html">Scikit-learn Decision Trees</a></li>
+                <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html">Classification Metrics</a></li>
+                <li><a href="https://scikit-learn.org/stable/modules/cross_validation.html">Model Validation</a></li>
+            </ul>
+
+            <h4>3. Financial Applications</h4>
+            <ul>
+                <li><b>Data Sources:</b>
+                    <ul>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/pages/get-data/center-research-security-prices-crsp/">CRSP Stock Data</a></li>
+                        <li><a href="https://www.kaggle.com/datasets/wordsforthewise/lending-club">Lending Club Dataset</a></li>
+                        <li><a href="https://fred.stlouisfed.org/">FRED Economic Data</a></li>
+                    </ul>
+                </li>
+                <li><b>Code Samples:</b>
+                    <ul>
+                        <li><a href="https://www.kaggle.com/datasets/wordsforthewise/lending-club/code">Lending Club Code</a></li>
+                    </ul>
+                </li>
+                <li><b>Applications:</b>
+                    <ul>
+                        <li>Credit Risk Assessment</li>
+                        <li>Rating Changes Prediction</li>
+                        <li>Fraud Detection</li>
+                        <li>Trading Signal Generation</li>
+                        <li>Default Prediction</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Weekly Assignment</h2>
+            <div class="alert alert-info">
+                <strong>Due:</strong> End of Week 7
+            </div>
+
+            <h3>Option 1: Credit Risk Classification</h3>
+            <ol>
+                <li>Data Preparation
+                    <ul>
+                        <li>Use Lending Club or WRDS data</li>
+                        <li>Prepare features: credit scores, debt ratios, employment history</li>
+                        <li>Handle class imbalance</li>
+                        <li>Split data respecting time order</li>
+                    </ul>
+                </li>
+                <li>Model Implementation
+                    <ul>
+                        <li>Implement decision tree classifier</li>
+                        <li>Use cross-validation for parameter tuning</li>
+                        <li>Consider class weights or sampling techniques</li>
+                        <li>Compare with logistic regression</li>
+                    </ul>
+                </li>
+                <li>Analysis
+                    <ul>
+                        <li>Evaluate using precision, recall, F1-score</li>
+                        <li>Analyze feature importance</li>
+                        <li>Visualize decision tree structure</li>
+                        <li>Consider economic implications of misclassification</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Option 2: Research-Based Application</h3>
+            <p>Design your own classification application in finance. Some suggestions:</p>
+            <ul>
+                <li>Rating Change Prediction
+                    <ul>
+                        <li>Predict credit rating upgrades/downgrades</li>
+                        <li>Use financial ratios and market indicators</li>
+                        <li>Compare with rating agency decisions</li>
+                    </ul>
+                </li>
+                <li>Trading Signal Generation
+                    <ul>
+                        <li>Classify market conditions</li>
+                        <li>Generate buy/sell signals</li>
+                        <li>Evaluate trading performance</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="alert alert-warning">
+                <strong>Submission Requirements:</strong>
+                <ul>
+                    <li>Code with clear documentation</li>
+                    <li>Brief report including:
+                        <ul>
+                            <li>Problem motivation and relevance</li>
+                            <li>Methodology and implementation details</li>
+                            <li>Results and interpretation</li>
+                            <li>Challenges encountered and solutions</li>
+                        </ul>
+                    </li>
+                    <li>If choosing Option 2, include references to papers of similar applications</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Implementation Tips:</h3>
+            <div class="alert alert-info">
+                <strong>Key Considerations:</strong>
+                <ul>
+                    <li>Handle class imbalance appropriately</li>
+                    <li>Use appropriate evaluation metrics</li>
+                    <li>Consider interpretability vs performance</li>
+                    <li>Document hyperparameter selection</li>
+                    <li>Be mindful of look-ahead bias</li>
+                    <li>Consider cost of misclassification</li>
+                </ul>
+            </div>
+        </section>
 
         <div style="text-align: center; margin-top: 20px;">
             <a href="week6.html">← Previous Week</a>

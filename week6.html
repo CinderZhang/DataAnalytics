@@ -28,46 +28,145 @@
  <main class="container">
         <h2>Week 6: Lasso and Ridge Regression for Financial Analysis</h2>
 
-        <h3>Learning Objectives:</h3>
-        <ul>
-            <li>Understand overfitting and the need for regularization in finance.</li>
-            <li>Grasp the fundamentals of Lasso (L1) and Ridge (L2) regularization.</li>
-            <li>Implement Lasso and Ridge regression in Python for financial datasets.</li>
-            <li>Optimize regularization parameters using cross-validation.</li>
-            <li>Interpret feature importances from Lasso regression.</li>
-        </ul>
+        <section>
+            <h3>Learning Objectives:</h3>
+            <ul>
+                <li>Understand overfitting and the need for regularization in finance</li>
+                <li>Master the fundamentals of Lasso (L1) and Ridge (L2) regularization</li>
+                <li>Implement regularized regression for financial applications</li>
+                <li>Optimize model parameters using cross-validation</li>
+                <li>Interpret and utilize feature selection from Lasso</li>
+            </ul>
+        </section>
 
-        <h3>Materials:</h3>
-        <h4>Understanding Regularization</h4>
-        <ul>
-            <li><a href="https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/" target="_blank">Lasso and Ridge</a></li>
-            <li>Overfitting in Finance: (Add a resource tailored to financial overfitting)</li>
-        </ul>
+        <section>
+            <h3>Core Resources:</h3>
+            
+            <h4>1. Theoretical Foundations</h4>
+            <ul>
+                <li><a href="https://www.jstor.org/stable/2346178">Original Ridge Regression Paper - Hoerl & Kennard (1970)</a></li>
+                <li><a href="https://www.jstor.org/stable/2335738">The Lasso Method - Tibshirani (1996)</a></li>
+                <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304405X07000797">Regularization in Financial Applications - DeMiguel et al. (2009)</a></li>
+            </ul>
 
-        <h4>Tools and Data Sources</h4>
-        <ul>
-            <li>Python and Scikit-learn:
+            <h4>2. Technical Implementation</h4>
+            <ul>
+                <li><a href="https://scikit-learn.org/stable/modules/linear_model.html">Scikit-learn Linear Models Documentation</a></li>
+                <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html">Lasso Implementation Guide</a></li>
+                <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html">Ridge Implementation Guide</a></li>
+                <li><a href="https://scikit-learn.org/stable/modules/cross_validation.html">Cross-Validation Methods</a></li>
+            </ul>
+
+            <h4>3. Financial Applications</h4>
+            <ul>
+                <li><b>Data Sources and Tools:</b>
+                    <ul>
+                        <li><a href="https://wrds-www.wharton.upenn.edu/">WRDS Platform</a>
+                            <ul>
+                                <li><a href="https://wrds-www.wharton.upenn.edu/pages/support/data-analytics/">Analytics Tools</a></li>
+                                <li><a href="https://wrds-www.wharton.upenn.edu/pages/support/applications/python-programming/">Python Integration</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://glassnode.com/">Glassnode</a>
+                            <ul>
+                                <li><a href="https://docs.glassnode.com/">Documentation</a></li>
+                                <li><a href="https://docs.glassnode.com/basic-api/api-guides">Implementation Guides</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>Research Papers:</b>
+                    <ul>
+                        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304405X19300595">Machine Learning in Asset Pricing - Gu, Kelly, Xiu (2020)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Weekly Assignment</h2>
+            <div class="alert alert-info">
+                <strong>Due:</strong> End of Week 6
+            </div>
+
+            <h3>Option 1: Predicting Stock Returns with Regularization</h3>
+            <ol>
+                <li>Data Preparation
+                    <ul>
+                        <li>Use WRDS to obtain monthly stock returns and firm characteristics</li>
+                        <li>Include standard factors: Size, Book-to-Market, Momentum</li>
+                        <li>Add accounting ratios: ROE, Leverage, Asset Growth</li>
+                        <li>Prepare a panel dataset spanning at least 10 years</li>
+                    </ul>
+                </li>
+                <li>Model Implementation
+                    <ul>
+                        <li>Implement both Lasso and Ridge for return prediction</li>
+                        <li>Use expanding window cross-validation (to respect time series nature)</li>
+                        <li>Compare with standard OLS using out-of-sample R²</li>
+                        <li>Document the impact of different λ values</li>
+                    </ul>
+                </li>
+                <li>Analysis
+                    <ul>
+                        <li>Which features survive Lasso's variable selection?</li>
+                        <li>How do Ridge coefficients differ from OLS?</li>
+                        <li>Does prediction improve in high volatility periods?</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Option 2: Research-Based Application</h3>
+            <p>Design your own application of regularization in finance. Some suggestions:</p>
+            <ul>
+
+                <li>Risk Factor Selection
+                    <ul>
+                        <li>Start with a large set of potential risk factors</li>
+                        <li>Use Lasso to identify the most important ones</li>
+                        <li>Compare with Fama-French factors</li>
+                    </ul>
+                </li>
+                <li>Credit Risk Assessment
+                    <ul>
+                        <li>Predict corporate defaults using accounting ratios</li>
+                        <li>Compare Lasso/Ridge with traditional models</li>
+                        <li>Evaluate prediction accuracy</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="alert alert-warning">
+                <strong>Submission Requirements:</strong>
                 <ul>
-                    <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html" target="_blank">Lasso</a></li>
-                    <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html" target="_blank">Ridge</a></li>
+                    <li>Code with clear documentation</li>
+                    <li>Brief report  including:
+                        <ul>
+                            <li>Problem motivation and relevance</li>
+                            <li>Methodology and implementation details</li>
+                            <li>Results and interpretation</li>
+                            <li>Challenges encountered and solutions</li>
+                        </ul>
+                    </li>
+                    <li>If choosing Option 2, include references to papers of similar applications</li>
                 </ul>
-            </li>
-            <li>Paid Service (Most university may have it): WRDS for Stock Data (Include WRDS tutorials/guides)</li>
-            <li>Paid Service: Glassnode for Crypto Data (Include Glassnode tutorials/guides)</li>
-        </ul>
+            </div>
+        </section>
 
-        <h3>Applications and Exercises:</h3>
-        <ol>
-            <li>**Stock Price Prediction:** Predict stock prices using WRDS data and investigate the impact of regularization. Start with FF factors and Come out with your own factors.</li>
-        </ol>
-
-        <h3>Beyond the Basics:</h3>
-        <p>Lasso and Ridge are powerful foundations. Explore more advanced techniques:</p>
-        <ul>
-            <li>Non-linear models (Decision Trees, Random Forests, Neural Networks)</li>
-            <li>Financial Feature Engineering</li>
-            <li>Time Series Considerations (ARIMA, GARCH)</li>
-        </ul>
+        <section>
+            <h3>Implementation Tips:</h3>
+            <div class="alert alert-info">
+                <strong>Key Considerations:</strong>
+                <ul>
+                    <li>Scale features before applying regularization</li>
+                    <li>Use TimeSeriesSplit for financial data</li>
+                    <li>Consider the trade-off between bias and variance</li>
+                    <li>Document parameter selection process</li>
+                    <li>Be mindful of look-ahead bias in financial applications</li>
+                    <li>Consider computational efficiency for large datasets</li>
+                </ul>
+            </div>
+        </section>
 
         <div style="text-align: center; margin-top: 20px;">
             <a href="week5.html">← Previous Week</a>

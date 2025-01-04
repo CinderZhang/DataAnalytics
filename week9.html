@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 9: Unsupervised Learning: Clustering</title>
+    <title>Week 9: Unsupervised Learning and Clustering in Finance</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
@@ -25,28 +25,135 @@
   
     <div style="height: 80px;"></div>
 
- <main class="container">
-        <h2>Week 9: Unsupervised Learning: Clustering</h2>
+    <main class="container">
+        <h1>Week 9: Unsupervised Learning and Clustering in Finance</h1>
+        
+        <section>
+            <h2>Learning Objectives:</h2>
+            <ul>
+                <li>Understand the fundamentals of unsupervised learning and its applications in finance</li>
+                <li>Master clustering techniques, particularly K-means clustering</li>
+                <li>Apply clustering algorithms to financial data analysis</li>
+                <li>Interpret and evaluate clustering results in financial contexts</li>
+            </ul>
+        </section>
 
-        <h3>Materials:</h3>
-        <ul>
-            <li><a href="https://www.geeksforgeeks.org/ml-types-learning-part-2/" target="_blank">Unsupervised Learning</a></li>
-            <li>Applications: Identify Anomalies (for fraud detection, risk management, security, default, financial crime etc.), Clustering asset allocation, Diversification on Funds, Investment Signal Identification.</li>
-            <li><a href="https://www.geeksforgeeks.org/clustering-in-machine-learning/" target="_blank">Clustering</a></li>
-            <li><a href="https://www.geeksforgeeks.org/k-means-clustering-introduction/" target="_blank">Clustering Example - K-means clustering</a></li>
-            <li><a href="https://www.linkedin.com/posts/andrew-ang-a9a65a89_a-sharper-lens-factors-and-sectors-blackrock-activity-7086676036762902528-wjiV/" target="_blank">Potential Application - Identify market segments: AMZN and TSLA are not tech but consumer discretionary sector stocks</a></li>
-        </ul>
+        <section>
+            <h2>Core Concepts:</h2>
+            
+            <h3>1. Unsupervised Learning Fundamentals</h3>
+            <ul>
+                <li><a href="https://www.geeksforgeeks.org/ml-types-learning-part-2/" target="_blank">Understanding Unsupervised Learning</a></li>
+                <li>Key Financial Applications:
+                    <ul>
+                        <li>Anomaly Detection (fraud, risk management, financial crime)</li>
+                        <li>Market Segmentation</li>
+                        <li>Portfolio Diversification</li>
+                        <li>Investment Signal Identification</li>
+                    </ul>
+                </li>
+            </ul>
 
-        <h3>Application and Exercises:</h3>
-        <ol>
-            <li>Clustering S&P 500 companies</li>
-            <li>Optional: Clustering Anomalies</li>
-            <li>Difference between Classification and Clustering</li>
-            <li>Conduct Clustering analysis.</li>
-            <li><a href="https://deepnote.com/@kokinoda/Data-Clustering-for-SandP500-Stock-Data-d71580fd-42ec-4c95-aae5-3ba4ddbb4ff1" target="_blank">Code Sample 1 - S&P 500</a></li>
-            <li><a href="https://medium.com/@facujallia/stock-classification-using-k-means-clustering-8441f75363de" target="_blank">Code Sample 2 - K-means</a></li>
-            <li><a href="https://www.kaggle.com/code/demirkaya/clustering-companies-based-on-stock-price-movement/notebook" target="_blank">Code Sample 3 - Company Clustering. This code is in R. It's a great skill to have to translate between Python and R (or any other language). Have ChatGPT help you with this.</a></li>
-        </ol>
+            <h3>2. Clustering in Financial Markets</h3>
+            <ul>
+                <li><a href="https://www.geeksforgeeks.org/clustering-in-machine-learning/" target="_blank">Clustering Fundamentals</a></li>
+                <li><a href="https://www.geeksforgeeks.org/k-means-clustering-introduction/" target="_blank">K-means Clustering Implementation</a></li>
+                <li>Real-World Application: <a href="https://www.linkedin.com/posts/andrew-ang-a9a65a89_a-sharper-lens-factors-and-sectors-blackrock-activity-7086676036762902528-wjiV/" target="_blank">Market Segmentation Case Study - AMZN & TSLA Sector Classification</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Practical Resources:</h2>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Code Implementations</h3>
+                </div>
+                <div class="panel-body">
+                    <ol>
+                        <li><a href="https://deepnote.com/@kokinoda/Data-Clustering-for-SandP500-Stock-Data-d71580fd-42ec-4c95-aae5-3ba4ddbb4ff1" target="_blank">S&P 500 Clustering Analysis</a>
+                            <ul>
+                                <li>Comprehensive implementation for market analysis</li>
+                                <li>Focus on financial data preprocessing</li>
+                            </ul>
+                        </li>
+                        <li><a href="https://medium.com/@facujallia/stock-classification-using-k-means-clustering-8441f75363de" target="_blank">K-means Stock Classification</a>
+                            <ul>
+                                <li>Step-by-step K-means implementation</li>
+                                <li>Feature engineering for financial data</li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.kaggle.com/code/demirkaya/clustering-companies-based-on-stock-price-movement/notebook" target="_blank">Advanced Company Clustering (R Implementation)</a>
+                            <ul>
+                                <li>Translation from R to Python </li>
+
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Assignment:</h2>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Financial Market Clustering Analysis</h3>
+                </div>
+                <div class="panel-body">
+                    <h4>Project Requirements:</h4>
+                    <ol>
+                        <li>Data Collection and Preparation
+                            <ul>
+                                <li>Collect S&P 500 company data (price, volume, financial ratios)</li>
+                                <li>Clean and preprocess the data appropriately</li>
+                                <li>Engineer relevant features for clustering</li>
+                            </ul>
+                        </li>
+                        <li>Clustering Analysis
+                            <ul>
+                                <li>Implement K-means clustering</li>
+                                <li>Determine optimal number of clusters</li>
+                                <li>Analyze cluster characteristics</li>
+                            </ul>
+                        </li>
+                        <li>Results Interpretation
+                            <ul>
+                                <li>Compare clusters with traditional sector classifications</li>
+                                <li>Identify potential investment opportunities</li>
+                                <li>Document anomalies and insights</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4>Deliverables:</h4>
+                    <ul>
+                        <li>Code Implementation:
+                            <ul>
+                                <li>Data collection and preprocessing</li>
+                                <li>Clustering analysis implementation</li>
+                                <li>Results visualization and analysis</li>
+                                <li>Clear documentation and comments</li>
+                                <li>Required dependencies listed</li>
+                            </ul>
+                        </li>
+                        <li>Brief presentation:
+                            <ul>
+                                <li>Overview of methodology</li>
+                                <li>Key findings and insights</li>
+                                <li>Investment implications</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>Submission:</h4>
+                    <ul>
+                        <li>Submit code and presentation through Blackboard</li>
+                        <li>Include instructions for running your code</li>
+                        <li>Due date: See course schedule</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
         <div style="text-align: center; margin-top: 20px;">
             <a href="week8.html">← Previous Week</a>
